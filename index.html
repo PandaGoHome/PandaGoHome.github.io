@@ -32,15 +32,27 @@
   }
 </script>
 
-<!-- 分享到微信的JavaScript代码 -->
-<script type="text/javascript">
-  function shareToWeChat() {
-    // 生成二维码图片，您可以使用第三方API或库来生成二维码图片
-    var qrCodeUrl = "https://example.com/api/generate_qrcode?url=" + encodeURIComponent(window.location.href);
-    var shareUrl = "weixin://qr/" + qrCodeUrl;
-    window.location.href = shareUrl;
-  }
+<script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script>
+  wx.config({
+    //配置信息
+  });
+  wx.ready(function() {
+    //调用分享接口
+    wx.onMenuShareTimeline({
+      title: '分享标题', // 分享标题
+      link: 'https://www.pandgohome.com', // 分享链接
+      imgUrl: 'https://www.pandgohome.com/images/share.png', // 分享图标
+      success: function () {
+        //分享成功后的回调函数
+      },
+      cancel: function () {
+        //取消分享后的回调函数
+      }
+    });
+  });
 </script>
+
 
 </body>
 </html>
