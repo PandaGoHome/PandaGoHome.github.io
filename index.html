@@ -15,5 +15,32 @@
 <div align=center>
 <img src="https://PandaGoHome.github.io/YaYa.jpg" width="x" height="y"/> 
 </div>
+<!-- 分享按钮 -->
+<div class="share-buttons">
+  <a href="#" class="share-btn" onclick="shareToQQ()">分享到QQ</a>
+  <a href="#" class="share-btn" onclick="shareToWeChat()">分享到微信</a>
+</div>
+
+<!-- 分享到QQ的JavaScript代码 -->
+<script type="text/javascript">
+  function shareToQQ() {
+    var url = encodeURIComponent(window.location.href);
+    var title = encodeURIComponent(document.title);
+    var pic = encodeURIComponent("https://example.com/images/share.png"); // 分享图片地址
+    var shareUrl = "https://connect.qq.com/widget/shareqq/index.html?url=" + url + "&title=" + title + "&pic=" + pic;
+    window.open(shareUrl);
+  }
+</script>
+
+<!-- 分享到微信的JavaScript代码 -->
+<script type="text/javascript">
+  function shareToWeChat() {
+    // 生成二维码图片，您可以使用第三方API或库来生成二维码图片
+    var qrCodeUrl = "https://example.com/api/generate_qrcode?url=" + encodeURIComponent(window.location.href);
+    var shareUrl = "weixin://qr/" + qrCodeUrl;
+    window.location.href = shareUrl;
+  }
+</script>
+
 </body>
 </html>
