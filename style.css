@@ -1,76 +1,93 @@
-/* 全局样式 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	color: #333;
-	line-height: 1.5;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-/* 头部样式 */
 header {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-header h1 {
-	margin: 0;
-}
-
-/* 主要内容样式 */
-main {
-	margin: 20px;
-}
-
-main h2 {
-	margin-top: 0;
-}
-
-main ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-main li {
-	margin-bottom: 10px;
-}
-
-main a {
-	color: #333;
-	text-decoration: none;
-}
-
-/* 特定区域样式 */
 section {
-	margin-top: 20px;
+  padding: 60px 0;
 }
 
-section h3 {
-	margin-top: 0;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-section ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.left {
+  flex: 1;
+  padding: 20px;
 }
 
-section li {
-	margin-bottom: 10px;
+.right {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
 }
 
-/* 页脚样式 */
-footer {
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
-	text-align: center;
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-footer p {
-	margin: 0;
-}```
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #f00;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+  }
+}
