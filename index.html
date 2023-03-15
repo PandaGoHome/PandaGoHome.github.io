@@ -2,6 +2,14 @@
 <head>
 <meta charset="utf-8">
 <title>熊猫回家</title>
+<style>
+    @media screen and (max-width: 768px) {
+      /* 在屏幕宽度小于等于768px时应用下面的样式 */
+      body {
+        white-space: normal;
+      }
+    }
+</style>  
 </head>
 <body>
 <h1 style="text-align:center;">熊猫回家 公益组织</h1>
@@ -15,44 +23,5 @@
 <div align=center>
 <img src="https://PandaGoHome.github.io/YaYa.jpg" width="x" height="y"/> 
 </div>
-<!-- 分享按钮 -->
-<div class="share-buttons">
-  <a href="#" class="share-btn" onclick="shareToQQ()">分享到QQ</a>
-  <a href="#" class="share-btn" onclick="shareToWeChat()">分享到微信</a>
-</div>
-
-<!-- 分享到QQ的JavaScript代码 -->
-<script type="text/javascript">
-  function shareToQQ() {
-    var url = encodeURIComponent(window.location.href);
-    var title = encodeURIComponent(document.title);
-    var pic = encodeURIComponent("https://example.com/images/share.png"); // 分享图片地址
-    var shareUrl = "https://connect.qq.com/widget/shareqq/index.html?url=" + url + "&title=" + title + "&pic=" + pic;
-    window.open(shareUrl);
-  }
-</script>
-
-<script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-<script>
-  wx.config({
-    //配置信息
-  });
-  wx.ready(function() {
-    //调用分享接口
-    wx.onMenuShareTimeline({
-      title: '分享标题', // 分享标题
-      link: 'https://www.pandgohome.com', // 分享链接
-      imgUrl: 'https://www.pandgohome.com/images/share.png', // 分享图标
-      success: function () {
-        //分享成功后的回调函数
-      },
-      cancel: function () {
-        //取消分享后的回调函数
-      }
-    });
-  });
-</script>
-
-
 </body>
 </html>
