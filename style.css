@@ -132,7 +132,7 @@ footer {
 @media only screen and (max-width: 600px) {
   /* Navigation styles for mobile */
   nav ul {
-    display: none;
+    display: block;
   }
 
   nav ul li {
