@@ -1,0 +1,128 @@
+/* 公共样式 */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 全局样式 */
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+}
+
+nav ul li:hover a {
+  background-color: #555;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+}
+
+nav ul li ul li a {
+  font-size: 14px;
+}
+
+main {
+  padding: 20px;
+  text-align: justify;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav li {
+    position: static;
+  }
+
+  nav ul li a {
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+  }
+
+  nav ul li:hover a {
+    background-color: transparent;
+  }
+
+  nav ul li ul {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    display: none;
+  }
+
+  nav ul li ul li a {
+    font-size: 16px;
+  }
+
+  main {
+    font-size: 18px;
+  }
+
+  section ul li {
+    font-size: 18px;
+  }
+}
